@@ -5,27 +5,26 @@ height = int(input("What is your height in cm? "))
 bill = 0
 
 if height >= 120:
-  print("You can ride the rollercoaster!")
-  age = int(input("What is your age? "))
-  if age < 12:
-    bill = 5
-    print("Child tickets are $5.")
-  elif age <= 18:
-    bill = 7
-    print("Youth tickets are $7.")
-  else:
-    bill = 12
-    print("Adult tickets are $12.")
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
 
-  wants_photo = input("Do you want a photo taken? Y or N. ")
-  if wants_photo == "Y":
-    bill += 3
+    wants_photo = input("Do you want a photo taken? Y or N. ")
+    if wants_photo == "Y":
+        bill += 3
 
-  print(f"Your final bill is ${bill}")
+    print(f"Your final bill is ${bill}")
 
 else:
-  print("Sorry, you have to grow taller before you can ride.")
-
+    print("Sorry, you have to grow taller before you can ride.")
 
 #Exercise 1
 '''
@@ -42,10 +41,10 @@ e.g. 59 is odd because 59 ÷ 2 = 29.5
 29.5 is not a whole number, it has decimal places. Therefore there is a remainder of 0.5, so the division is not clean.
 '''
 number = int(input("Enter number: "))
-if number%2 == 0:
-  print("This is an even number.")
+if number % 2 == 0:
+    print("This is an even number.")
 else:
-  print("This is an odd number.")
+    print("This is an odd number.")
 
 '''
 Exercise 2
@@ -87,16 +86,17 @@ except every year that is evenly divisible by 100 with no remainder
 unless the year is also divisible by 400 with no remainder
 
 '''
-if year%4 == 0:
-  if year%100 ==0:
-    if year%400 ==0:
-      print("Leap year")
+year = int(input("Enter you year: "))
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year")
+        else:
+            print("Not leap year")
     else:
-      print("Not leap year")
-  else:
-    print("Leap year")
+        print("Leap year")
 else:
-  print("Not leap year")
+    print("Not leap year")
 
 '''
 Based on a user's order, work out their final bill.
@@ -119,18 +119,18 @@ add_pepperoni = input("Do you want pepperoni? Y or N")
 extra_cheese = input("Do you want pepperoni? Y or N")
 
 if size == "S":
-  bill = 15
+    bill = 15
 elif size == "M":
-  bill = 20
-else :
-  bill =25
+    bill = 20
+else:
+    bill = 25
 if size == "S" and add_pepperoni == "Y":
-  bill += 2
-elif size == "M" or "L" and add_pepperoni =="Y":
-  bill += 3
+    bill += 2
+elif size == "M" or "L" and add_pepperoni == "Y":
+    bill += 3
 
 if extra_cheese == "Y":
-  bill +=1
+    bill += 1
 
 print(f"Your final bill is: ${bill}.")
 
@@ -173,13 +173,12 @@ V = name_low.count("v")
 E = name_low.count("e")
 total_loveee = L + O + V + E
 Love_score = int(str(total_true) + str(total_loveee))
-if Love_score <10 or Love_score >90:
-  print(f"Your score is {Love_score}, you go together like coke and mentos.")
-elif Love_score >40 and Love_score <50:
-  print(f"Your score is {Love_score}, you are alright together.")
+if Love_score < 10 or Love_score > 90:
+    print(f"Your score is {Love_score}, you go together like coke and mentos.")
+elif Love_score > 40 and Love_score < 50:
+    print(f"Your score is {Love_score}, you are alright together.")
 else:
-  print(f"Your score is {Love_score}.")
-
+    print(f"Your score is {Love_score}.")
 
 #Treasure game :
 print('''
@@ -209,18 +208,20 @@ print("Your mission is to find the treasure.")
 
 choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
 if choice1 == "left":
-  choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
-  if choice2 == "wait":
-    choice3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower()
-    if choice3 == "red":
-      print("It's a room full of fire. Game Over.")
-    elif choice3 == "yellow":
-      print("You found the treasure! You Win!")
-    elif choice3 == "blue":
-      print("You enter a room of beasts. Game Over.")
+    choice2 = input(
+        'You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
+    if choice2 == "wait":
+        choice3 = input(
+            "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower()
+        if choice3 == "red":
+            print("It's a room full of fire. Game Over.")
+        elif choice3 == "yellow":
+            print("You found the treasure! You Win!")
+        elif choice3 == "blue":
+            print("You enter a room of beasts. Game Over.")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
     else:
-      print("You chose a door that doesn't exist. Game Over.")
-  else:
-    print("You get attacked by an angry trout. Game Over.")
+        print("You get attacked by an angry trout. Game Over.")
 else:
-  print("You fell into a hole. Game Over.")
+    print("You fell into a hole. Game Over.")
